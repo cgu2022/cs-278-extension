@@ -1,0 +1,4 @@
+cgu2022-cs-278-extension:
+  admin:
+    settings:
+      api_key_label: 'OpenAI API Key'
