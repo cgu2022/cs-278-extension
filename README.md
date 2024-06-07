@@ -5,6 +5,13 @@ An Flarum extension for my CS 278 project, Spring 2024
 
 # Make sure to do the following:
 
+## OpenAI Community's PHP API Accessor Library
+Do this to install:
+```
+composer require openai-php/client guzzlehttp/guzzle
+```
+(You will need to have php already configured for this to work)
+
 ## Download and Configure the CA Certificates
 
 1. **Download the CA Certificates**:
@@ -17,3 +24,5 @@ An Flarum extension for my CS 278 project, Spring 2024
 curl.cainfo = "C:\path\to\your\cacert.pem"
 ```
 - Save the `php.ini` file and restart your web server.
+
+
