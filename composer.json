@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CS278Extension\\": "src/"
+            "CGU2022\\CS278Extension\\": "src/"
         }
     },
     "extra": {

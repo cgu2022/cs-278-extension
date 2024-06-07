@@ -16,7 +16,7 @@ app.initializers.add('cgu2022-cs-278-extension', () => {
             const post = app.store.getById('posts', postId);
             const authorName = post && post.user() ? post.user().username() : 'Unknown';
             const postContent = post ? post.contentPlain() : '';
-            const firstFiveWords = postContent.split(' ').slice(0, 5).join(' ');
+            // const firstFiveWords = postContent.split(' ').slice(0, 5).join(' ');
 
             // Comment out the following line to stop displaying the posts in a green box
             // postSummaries.push(`${authorName}: ${postContent}`);
