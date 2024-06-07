@@ -1,23 +1,24 @@
 {
-  "name": "cgu2022/cs-278-extension",
-  "description": "A Flarum extension.",
-  "type": "flarum-extension",
-  "require": {
-    "flarum/core": "^1.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "CGU2022\\CS278Extension\\": "src/"
+    "name": "cgu2022/cs-278-extension",
+    "description": "CS-278 Extension for Flarum",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CS278Extension\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "CS-278 Extension",
+            "icon": {
+                "name": "fas fa-magic",
+                "backgroundColor": "#4FC08D",
+                "color": "#fff"
+            }
+        }
     }
-  },
-  "extra": {
-    "flarum-extension": {
-      "title": "CS-278 Extension",
-      "icon": {
-        "name": "fas fa-puzzle-piece",
-        "backgroundColor": "#f9b625",
-        "color": "#fff"
-      }
-    }
-  }
 }
