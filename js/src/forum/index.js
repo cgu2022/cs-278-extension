@@ -19,7 +19,7 @@ app.initializers.add('cgu2022-cs-278-extension', () => {
             // const firstFiveWords = postContent.split(' ').slice(0, 5).join(' '); // PROBLEMATIC CODE
 
             // Comment out the following line to stop displaying the posts in a green box
-            postSummaries.push(`${authorName}: ${postContent}`);
+            // postSummaries.push(`${authorName}: ${postContent}`);
         });
     }
 
