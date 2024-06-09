@@ -2,12 +2,12 @@
 
 A Flarum extension for my CS 278 project, Spring 2024.
 
-All relevant files to the development of this extension are explained below and contains comments of each part.
+All relevant files to the development of this extension are explained in the second section, and each of them contain insightful comments.
 
- 1. Setup Instructions
- 2. CS 278 UniForum Extension Description
- 3. Installing CS 278 Extension Instructions
- 4. Developing CS 278 Extension Instructions
+1. Setup Instructions
+2. CS 278 UniForum Extension Description
+3. Installing CS 278 Extension Instructions
+4. Developing CS 278 Extension Instructions
 
 ----
 
@@ -159,56 +159,66 @@ CS-278_EXTENSION
 
 ## Installing UniForum
 
-To install the extension, type this command:
+To install the extension, run the following command:
 
 ```bash
 composer require cgu2022/cs-278-extension
 ```
 
-And to update the extension when there's a version release, do this:
+To update the extension when a new version is released, run:
 
 ```bash
 composer update
 ```
 
-NOTE: If you are using **a docker image** to deploy your UniForum instance, then in your `docker_entrypoint.sh` file, don't do the above commands and do this instead by writing this line in that file:
+**NOTE**: If you are using a Docker image to deploy your UniForum instance, do not use the above commands directly. Instead, add the following line to your `docker_entrypoint.sh` file:
 
 ```bash
 extension require cgu2022/cs-278-extension
 ```
-Finally, you''ll need to 
 
-## Developing UniForum
-
-Once you've completed the setup and have understood the files and the fail structure of this extension, you can develop UniForum.
-
-First, make a folder called "packages" in the root directory of your Flarum instance. Then, run the following:
-
-```bash
-composer config repositories.0 path "packages/*"
-composer require cgu2022/cs-278-extension *@dev
-```
-
-Then, in the `js` folder, run the following:
-```
-npm install
-npm start dev
-```
-
-**EACH TIME YOU MAKE A CHANGE**: 
-- Restart the web server
-- Run `composer.json` and `npm install` if necessary
-- Relaunch the Node.js developer environment by re-running the "npm start dev" command.
-- Lastly, make sure to disable and then re-enable this extension in the *administrator* panel!
-
-Do keep an eye on the `composer.json` file to make sure all the dependencies and installation configurations are working as intended.
-
-Please feel free to submit a pull request if you have any commits you'd like to make to the public repo!
+This ensures that the extension is properly installed during the Docker container's initialization.
 
 ---
 
-### Useful Links:
+## Developing UniForum
 
-- https://docs.flarum.org/
-- https://docs.flarum.org/extend
-- https://api.docs.flarum.org/
+Once you have completed the setup and familiarized yourself with the file structure, you can start developing UniForum.
+
+1. **Prepare the Environment**:
+   - Create a folder named "packages" in the root directory of your Flarum instance.
+   - Run the following commands to set up the Composer repository and require the extension in development mode:
+
+   ```bash
+   composer config repositories.0 path "packages/*"
+   composer require cgu2022/cs-278-extension *@dev
+   ```
+
+2. **Install JavaScript Dependencies**:
+   - Navigate to the `js` folder and run the following commands:
+
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+3. **During Development**:
+   - **EACH TIME YOU MAKE A CHANGE**:
+     - Restart the web server.
+     - Run `composer install` and `npm install` if necessary.
+     - Relaunch the Node.js development environment by running `npm run dev` again.
+     - Disable and then re-enable this extension in the Flarum *administrator* panel to apply changes.
+
+4. **Check Dependencies**:
+   - Ensure the `composer.json` file contains all necessary dependencies and configurations for your development environment.
+
+5. **Contributing**:
+   - Feel free to submit a pull request if you have any improvements or bug fixes for the extension. Contributions are welcome!
+
+---
+
+### Useful Links
+
+- [Flarum Documentation](https://docs.flarum.org/)
+- [Flarum Extension Documentation](https://docs.flarum.org/extend)
+- [Flarum API Documentation](https://api.docs.flarum.org/)
